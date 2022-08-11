@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Card } from "./components/card";
 import { Header } from "./components/header";
 import { GET_STAR_WAR_DATA } from "./GraphQl/Queries";
+import device from "./utils/device";
 
 import { Layout, Box, Loader, Grid, EmptyState } from "flexibull-meme";
 import { Theme } from "./config/theme";
@@ -13,8 +14,11 @@ const StyledDiv = styled.div`
   margin: 0 auto;
   padding: 100px 50px;
   width: 80%;
-`;
 
+  @media ${device.tabletM} {
+    width: 100%;
+  }
+`;
 function App() {
   const { loading, error, data } = useQuery(GET_STAR_WAR_DATA);
 

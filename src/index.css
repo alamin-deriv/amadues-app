@@ -15,3 +15,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.iMsOCG {
+  @media (max-width: 48em) {
+   grid-template-columns: 1fr 2fr !important;
+  }
+    
+}
